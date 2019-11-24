@@ -9,9 +9,19 @@ class App extends Component {
   render(){
     return(
       <Router>
-        <div className="container">
-          <h1>hello</h1>
-        </div>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <Link to="/" className="navbar-brand">Brand</Link>
+            <div className="collpase nav-collapse">
+              <ul className="navbar-nav mr-auto">
+                <li className="navbar-item">
+                  <Link to="/" className="nav-link">Todos</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/create" className="nav-link">CreateTodo</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <Route exact path="/" component={ListTodo} />
         <Route exact path="/edit/:id" component={EditTodo} />
         <Route exact path="/create" component={CreateTodo} />

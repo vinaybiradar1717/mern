@@ -9,6 +9,7 @@ class App extends Component {
   render(){
     return(
       <Router>
+          <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/" className="navbar-brand">Brand</Link>
             <div className="collpase nav-collapse">
@@ -25,6 +26,7 @@ class App extends Component {
         <Route exact path="/" component={ListTodo} />
         <Route exact path="/edit/:id" component={EditTodo} />
         <Route exact path="/create" component={CreateTodo} />
+          </div>
       </Router>
     )
   }
